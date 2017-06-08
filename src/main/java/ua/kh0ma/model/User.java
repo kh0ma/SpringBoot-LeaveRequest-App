@@ -1,5 +1,9 @@
 package ua.kh0ma.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -10,6 +14,10 @@ import java.util.List;
  */
 @Entity
 @Table(name="users")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -18,28 +26,4 @@ public class User {
 
     @NotEmpty
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

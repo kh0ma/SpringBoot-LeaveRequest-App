@@ -1,5 +1,10 @@
 package ua.kh0ma.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -11,6 +16,10 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name="leave_request")
 @NamedQuery(name = LeaveRequest.ALL, query = "SELECT lr FROM LeaveRequest lr WHERE lr.user.id=:userId")
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
 public class LeaveRequest {
     public static final String ALL = "LeaveRequest.getAll";
 
@@ -30,56 +39,4 @@ public class LeaveRequest {
 
     @NotNull
     private Integer countDays;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-
-    public LocalDateTime getDateStart() {
-        return dateStart;
-    }
-
-    public void setDateStart(LocalDateTime dateStart) {
-        this.dateStart = dateStart;
-    }
-
-    public LocalDateTime getDateEnd() {
-        return dateEnd;
-    }
-
-    public void setDateEnd(LocalDateTime dateEnd) {
-        this.dateEnd = dateEnd;
-    }
-
-    public Integer getCountDays() {
-        return countDays;
-    }
-
-    public void setCountDays(Integer countDays) {
-        this.countDays = countDays;
-    }
-
-    @Override
-    public String toString() {
-        return "LeaveRequest{" +
-                "id=" + id +
-                ", user=" + user +
-                ", dateStart=" + dateStart +
-                ", dateEnd=" + dateEnd +
-                ", countDays=" + countDays +
-                '}';
-    }
 }
