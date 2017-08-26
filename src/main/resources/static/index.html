@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeaveRequest</title>
+    <link rel="shortcut icon" href="/resources/icons/favicon.ico">
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.css">
+    <link rel="stylesheet" href="webjars/datetimepicker/2.4.7/jquery.datetimepicker.css">
+</head>
+<body>
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="margin-top: 100pt">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label for="date_start" class="col-md-4 control-label">Date start:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="date_start" name="date_start" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date_end" class="col-md-4 control-label">Date end:</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="date_end" name="date_end" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="controls col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
+                                <button id="add_button" class="btn btn-info" style="width: 100%">add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div id="render" class="col-md-4" style="margin-top: 20pt">
+
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="webjars/datetimepicker/2.4.7/build/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
